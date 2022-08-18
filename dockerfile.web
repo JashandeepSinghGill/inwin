@@ -9,6 +9,10 @@ COPY ROOT.war /usr/local/tomcat/webapps/
 # RUN rm /usr/local/tomcat/conf/context.xml
 # COPY context.xml /usr/local/tomcat/conf/
 
+COPY ./catalina-dynamic-port.sh /
+RUN chmod +x /catalina-dynamic-port.sh
+ENTRYPOINT ["/catalina-dynamic-port.sh"]
+
 EXPOSE $TOMCAT_HTTP_PORT
 
 CMD ["catalina-dynamic-port.sh"]

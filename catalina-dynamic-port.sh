@@ -3,8 +3,8 @@ if [ -z "$PORT" ]
 then 
   echo "Tomcat HTTP port not changed"
 else 
-  echo "Tomcat HTTP port set to $TOMCAT_HTTP_PORT"
-  sed -i "s/port=\"[0-9]\+\" protocol=\"HTTP\/1.1\"/port=\"$TOMCAT_HTTP_PORT\" protocol=\"HTTP\/1.1\"/" $CATALINA_HOME/conf/server.xml
+  echo "Tomcat HTTP port set to $PORT"
+  sed -i "s/port=\"[0-9]\+\" protocol=\"HTTP\/1.1\"/port=\"$PORT\" protocol=\"HTTP\/1.1\"/" $CATALINA_HOME/conf/server.xml
 fi
 
 if [ -z "$TOMCAT_AJP_PORT" ]

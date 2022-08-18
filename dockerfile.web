@@ -13,6 +13,6 @@ COPY ./catalina-dynamic-port.sh /
 RUN chmod +x /catalina-dynamic-port.sh
 ENTRYPOINT ["/catalina-dynamic-port.sh"]
 
-EXPOSE $TOMCAT_HTTP_PORT
+EXPOSE $PORT
 
 CMD ["catalina-dynamic-port.sh"]

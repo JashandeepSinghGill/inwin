@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ -z "$TOMCAT_HTTP_PORT" ]
+if [ -z "$PORT" ]
 then 
   echo "Tomcat HTTP port not changed"
 else 
